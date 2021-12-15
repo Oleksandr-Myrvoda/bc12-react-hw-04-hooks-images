@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/bc12-react-hw-04-hooks-images/static/css/main.cada7817.chunk.css",
+    "main.js": "/bc12-react-hw-04-hooks-images/static/js/main.55b99d4d.chunk.js",
+    "main.js.map": "/bc12-react-hw-04-hooks-images/static/js/main.55b99d4d.chunk.js.map",
+    "runtime-main.js": "/bc12-react-hw-04-hooks-images/static/js/runtime-main.e5492767.js",
+    "runtime-main.js.map": "/bc12-react-hw-04-hooks-images/static/js/runtime-main.e5492767.js.map",
+    "static/js/2.c3b95b7c.chunk.js": "/bc12-react-hw-04-hooks-images/static/js/2.c3b95b7c.chunk.js",
+    "static/js/2.c3b95b7c.chunk.js.map": "/bc12-react-hw-04-hooks-images/static/js/2.c3b95b7c.chunk.js.map",
+    "index.html": "/bc12-react-hw-04-hooks-images/index.html",
+    "static/css/main.cada7817.chunk.css.map": "/bc12-react-hw-04-hooks-images/static/css/main.cada7817.chunk.css.map",
+    "static/js/2.c3b95b7c.chunk.js.LICENSE.txt": "/bc12-react-hw-04-hooks-images/static/js/2.c3b95b7c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e5492767.js",
+    "static/js/2.c3b95b7c.chunk.js",
+    "static/css/main.cada7817.chunk.css",
+    "static/js/main.55b99d4d.chunk.js"
+  ]
+}
