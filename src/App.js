@@ -39,30 +39,47 @@ const App = () => {
 
   const closeModal = () => setOpenedModal(MODAL.NONE);
   const search = () => setCurrentPage((prevCurrentPage) => prevCurrentPage + 1);
+  // const getDataApi = (currentPage, searchQuery) => {
+  //   // if (!searchQuery) return;
+  //   setIsLoading(true);
 
-  const getDataApi = (currentPage, searchQuery) => {
-    setIsLoading(true);
+  //   fetchHits({ currentPage, searchQuery })
+  //     .then((hits) => {
+  //       setHits((prevHits) => [...prevHits, ...hits]);
+  //     })
+  //     .catch((error) => setError(error.message))
+  //     .finally(() => {
+  //       setIsLoading(false);
 
-    fetchHits({ currentPage, searchQuery })
-      .then((hits) => {
-        console.log(hits);
-        setHits((prevHits) => [...prevHits, ...hits]);
-      })
-      .catch((error) => setError(error.message))
-      .finally(() => {
-        setIsLoading(false);
-
-        window.scrollTo({
-          top: document.documentElement.scrollHeight,
-          behavior: "smooth",
-        });
-      });
-  };
+  //       window.scrollTo({
+  //         top: document.documentElement.scrollHeight,
+  //         behavior: "smooth",
+  //       });
+  //     });
+  // };
 
   useEffect(() => {
     if (!searchQuery) return;
 
-    getDataApi(currentPage, searchQuery);
+    const getDataApi = () => {
+      setIsLoading(true);
+
+      fetchHits({ currentPage, searchQuery })
+        .then((hits) => {
+          setHits((prevHits) => [...prevHits, ...hits]);
+        })
+        .catch((error) => setError(error.message))
+        .finally(() => {
+          setIsLoading(false);
+
+          window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: "smooth",
+          });
+        });
+    };
+
+    getDataApi();
   }, [currentPage, searchQuery]);
 
   const shouldRenderLoadMoreButton = hits.length > 0 && !isLoading;
